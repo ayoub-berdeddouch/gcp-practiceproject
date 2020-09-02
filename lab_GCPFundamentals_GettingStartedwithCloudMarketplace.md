@@ -56,7 +56,7 @@ After the software is installed, a summary of the details for the instance, incl
 1_When the deployment is complete, click the Site address link in the right pane.
 Alternatively, you can click Visit the site in the Get started with LAMP Certified by Bitnami section of the page. A new browser tab displays a congratulations message. This page confirms that, as part of the LAMP stack, the Apache HTTP Server is running.
 
-![Congrats](imgs/LAMP_good.png)
+![Congrats](imgs/LAMP_good.PNG)
 
 2_Close the congratulations browser tab.
 
@@ -77,9 +77,9 @@ In a new window, a secure login shell session on your virtual machine appears.
 SITE_ADDRESS = http://34.123.35.35/
 > http://SITE_ADDRESS/phpinfo.php
 
-![phpinfo.php](imgs/phpinfo_php.png)
+![phpinfo.php](imgs/phpinfo_php.PNG)
 A summary of the PHP configuration of your server is displayed.
 
 
 
-![End Lab](imgs/lab_GoogleCloudFundamentals_GettingStartedwithCloudMarketplace.png)
+![End Lab](imgs/lab_GoogleCloudFundamentals_GettingStartedwithCloudMarketplace.PNG)
