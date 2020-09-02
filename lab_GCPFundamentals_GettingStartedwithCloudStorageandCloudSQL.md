@@ -134,28 +134,28 @@ Use the nano text editor to edit a file called index.php:
 sudo nano index.php
 
 Paste the content below into the file:
-
+>
 > <html>
-<head><title>Welcome to my excellent blog</title></head>
-<body>
-<h1>Welcome to my excellent blog</h1>
-<?php
- $dbserver = "CLOUDSQLIP";
-$dbuser = "blogdbuser";
-$dbpassword = "DBPASSWORD";
-// In a production blog, we would not store the MySQL
-// password in the document root. Instead, we would store it in a
-// configuration file elsewhere on the web server VM instance.
+> <head><title>Welcome to my excellent blog</title></head>
+> <body>
+> <h1>Welcome to my excellent blog</h1>
+> <?php
+> $dbserver = "CLOUDSQLIP";
+> $dbuser = "blogdbuser";
+> $dbpassword = "DBPASSWORD";
+> // In a production blog, we would not store the MySQL
+> // password in the document root. Instead, we would store it in a
+> // configuration file elsewhere on the web server VM instance.
 
-$conn = new mysqli($dbserver, $dbuser, $dbpassword);
-
-if (mysqli_connect_error()) {
-        echo ("Database connection failed: " . mysqli_connect_error());
-} else {
-        echo ("Database connection succeeded.");
-}
-?>
-</body></html>
+> $conn = new mysqli($dbserver, $dbuser, $dbpassword);
+> 
+> if (mysqli_connect_error()) {
+>         echo ("Database connection failed: " . mysqli_connect_error());
+> } else {
+>         echo ("Database connection succeeded.");
+> }
+> ?>
+> </body></html>
 
 
 Press Ctrl+O, and then press Enter to save your edited file.
@@ -214,13 +214,13 @@ Use the arrow keys to move the cursor to the line that contains the h1 element. 
 
 Paste this HTML markup immediately before the URL:
 
-> <img src='Place a closing single quotation mark and a closing angle bracket at the end of the URL:'>
+> <#img src='Place a closing single quotation mark and a closing angle bracket at the end of the URL:'>
 
 The resulting line will look like this:
 
 > <#img src='https://storage.googleapis.com/qwiklabs-gcp-0005e186fa559a09/my-excellent-blog.png'>
 
-The effect of these steps is to place the line containing <img src='...'> immediately before the line containing <h1>...</h1>
+The effect of these steps is to place the line containing §<#img src='...'> immediately before the line containing <#h1>...</h1>
 
 Do not copy the URL shown here. Instead, copy the URL shown by the Storage browser in your own Cloud Platform project.
 Press Ctrl+O, and then press Enter to save your edited file.
@@ -230,9 +230,13 @@ Restart the web server:
 Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, its content now includes a banner image.
 
 ![](indexphp.PNG)
+
 ![](page_index_php.PNG)
+
 ![](page_index_php_success.PNG)
+
 ![](page_index_php_success_withimg.PNG)
+
 ![](lab_GCPFundamentals_GettingStartedwithCloudStorageandCloudSQL.PNG)
 
 
