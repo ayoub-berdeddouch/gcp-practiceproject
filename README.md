@@ -22,3 +22,23 @@ The result of both challenges shall be documented in a Github repository
  
  **1** How to get started with Github is an available course to learners via the Associate Cloud Engineer Foundational Deep Dive Channel (2020) 
  **2** Submit the documented github repo to the GADS Team here  - bit.ly/GADSPracticeProjectSubmission
+
+
+
+## LABs : 
+
+### GCP Fundamentals: Getting Started with Cloud Marketplace ✅
+### GCP Fundamentals: Getting Started with Compute Engine ✅
+### Module: GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL ✅
+### GCP Fundamentals: Getting Started with Kubernetes Engine ❌
+### GCP Fundamentals: Getting Started with App Engine ❌
+### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ❌
+### GCP Fundamentals: Getting Started with BigQuery ❌
+### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK ❌
+### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
+### App Dev: Storing Image and Video Files in Cloud Storage v1.1 ❌
+### Module: Introduction to Google Cloud Platform ❌
+### Lab: Recommend Products using ML with Cloud SQL and Dataproc ❌
+### Lab: Predict Visitor Purchases with a Classification Model with BigQuery ML ❌
+### Lab: Create a Streaming Data Pipeline for a Real-Time Dashboard with Cloud Dataflow ❌
+### Lab: Classify Images with Pre-built ML Models using Cloud Vision API and AutoML ❌
