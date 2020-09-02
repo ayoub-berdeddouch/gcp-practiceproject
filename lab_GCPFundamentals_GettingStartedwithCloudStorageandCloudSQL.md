@@ -8,13 +8,9 @@ You also configure the web server to reference the image in the Cloud Storage bu
 
 # Objectives
 > In this lab, you learn how to perform the following tasks:
-
 > Create a Cloud Storage bucket and place an image into it.
-
 > Create a Cloud SQL instance and configure it.
-
 > Connect to the Cloud SQL instance from a web server.
-
 > Use the image in the Cloud Storage bucket on a web page.
 
 
@@ -32,6 +28,7 @@ GCP Project ID : qwiklabs-gcp-02-a20c8315a7b2
 Region : us-central1
 
 Zone : us-central1-a
+
 ################################################
 
 
@@ -127,54 +124,45 @@ In the VM instances list, click SSH in the row for your VM instance bloghost.
 
 In your ssh session on bloghost, change your working directory to the document root of the web server:
 
-cd /var/www/html
+> cd /var/www/html
 
 Use the nano text editor to edit a file called index.php:
-
-sudo nano index.php
+> sudo nano index.php
 
 Paste the content below into the file:
-> <html>
-> <head><title>Welcome to my excellent blog</title></head>
-> <body>
-> <h1>Welcome to my excellent blog</h1>
-> <?php
-> $dbserver = "CLOUDSQLIP";
-> $dbuser = "blogdbuser";
-> $dbpassword = "DBPASSWORD";
-> // In a production blog, we would not store the MySQL
-> // password in the document root. Instead, we would store it in a
-> // configuration file elsewhere on the web server VM instance.
-
-> $conn = new mysqli($dbserver, $dbuser, $dbpassword);
-> 
-> if (mysqli_connect_error()) {
->         echo ("Database connection failed: " . mysqli_connect_error());
-> } else {
->         echo ("Database connection succeeded.");
-> }
-> ?>
-> </body></html>
-
+#<html>
+#<head><title>Welcome to my excellent blog</title></head>
+#<body>
+#<h1>Welcome to my excellent blog</h1>
+#<?php
+#$dbserver = "CLOUDSQLIP";
+#$dbuser = "blogdbuser";
+#$dbpassword = "DBPASSWORD";
+#// In a production blog, we would not store the MySQL
+#// password in the document root. Instead, we would store it in a
+#// configuration file elsewhere on the web server VM instance.
+#$conn = new mysqli($dbserver, $dbuser, $dbpassword);
+#if (mysqli_connect_error()) {
+#        echo ("Database connection failed: " . mysqli_connect_error());
+#} else {
+#         echo ("Database connection succeeded.");
+#}
+#?>
+#</body>
+#</html>
 
 Press Ctrl+O, and then press Enter to save your edited file.
 Press Ctrl+X to exit the nano text editor.
 Restart the web server:
 > sudo service apache2 restart
-
 Open a new web browser tab and paste into the address bar your bloghost VM instance's external IP address followed by /index.php. The URL will look like this:
-
-> http://34.70.208.116/index.php
+> ##http://34.70.208.116/index.php
 
 When you load the page, you will see that its content includes an error message beginning with the words:
-
 ** Database connection failed: ...**
-
 This message occurs because you have not yet configured PHP's connection to your Cloud SQL instance.
-
 Return to your ssh session on bloghost. Use the nano text editor to edit index.php again.
 > sudo nano index.php
-
 
 In the nano text editor, replace CLOUDSQLIP = 35.223.157.151 with the Cloud SQL instance Public IP address that you noted above. Leave the quotation marks around the value in place.
 In the nano text editor, replace DBPASSWORD = blogayoub with the Cloud SQL database password that you defined above. Leave the quotation marks around the value in place.
@@ -226,21 +214,19 @@ Press Ctrl+O, and then press Enter to save your edited file.
 Press Ctrl+X to exit the nano text editor.
 Restart the web server:
 > sudo service apache2 restart
-Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, its content now includes a banner image.
-
+Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, its content now includes a banner image
 
 ################################################################
 
+![](imgs/indexphp.PNG)
 
-![](indexphp.PNG)
+![](imgs/page_index_php.PNG)
 
-![](page_index_php.PNG)
+![](imgs/page_index_php_success.PNG)
 
-![](page_index_php_success.PNG)
+![](imgs/page_index_php_success_withimg.PNG)
 
-![](page_index_php_success_withimg.PNG)
-
-![](lab_GCPFundamentals_GettingStartedwithCloudStorageandCloudSQL.PNG)
+![](imgs/lab_GCPFundamentals_GettingStartedwithCloudStorageandCloudSQL.PNG)
 
 
 
