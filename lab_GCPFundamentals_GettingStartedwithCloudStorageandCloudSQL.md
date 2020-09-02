@@ -135,7 +135,7 @@ sudo nano index.php
 
 Paste the content below into the file:
 
-<html>
+> <html>
 <head><title>Welcome to my excellent blog</title></head>
 <body>
 <h1>Welcome to my excellent blog</h1>
@@ -159,16 +159,13 @@ if (mysqli_connect_error()) {
 
 
 Press Ctrl+O, and then press Enter to save your edited file.
-
 Press Ctrl+X to exit the nano text editor.
-
 Restart the web server:
-
-sudo service apache2 restart
+> sudo service apache2 restart
 
 Open a new web browser tab and paste into the address bar your bloghost VM instance's external IP address followed by /index.php. The URL will look like this:
 
-http://34.70.208.116/index.php
+> http://34.70.208.116/index.php
 
 When you load the page, you will see that its content includes an error message beginning with the words:
 
@@ -177,21 +174,16 @@ When you load the page, you will see that its content includes an error message 
 This message occurs because you have not yet configured PHP's connection to your Cloud SQL instance.
 
 Return to your ssh session on bloghost. Use the nano text editor to edit index.php again.
-
-sudo nano index.php
+> sudo nano index.php
 
 
 In the nano text editor, replace CLOUDSQLIP = 35.223.157.151 with the Cloud SQL instance Public IP address that you noted above. Leave the quotation marks around the value in place.
-
 In the nano text editor, replace DBPASSWORD = blogayoub with the Cloud SQL database password that you defined above. Leave the quotation marks around the value in place.
-
 Press Ctrl+O, and then press Enter to save your edited file.
-
 Press Ctrl+X to exit the nano text editor.
-
 Restart the web server:
 
-sudo service apache2 restart
+> sudo service apache2 restart
 
 Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, the following message appears:
 
@@ -213,39 +205,28 @@ If you see neither a link icon nor a "Public link", try refreshing the browser. 
 Return to your ssh session on your bloghost VM instance.
 
 Enter this command to set your working directory to the document root of the web server:
-
-cd /var/www/html
+> cd /var/www/html
 
 Use the nano text editor to edit index.php:
-
-sudo nano index.php
+> sudo nano index.php
 
 Use the arrow keys to move the cursor to the line that contains the h1 element. Press Enter to open up a new, blank screen line, and then paste the URL you copied earlier into the line.
 
 Paste this HTML markup immediately before the URL:
 
-<img src='
-
-Place a closing single quotation mark and a closing angle bracket at the end of the URL:
-
-'>
+> <img src='Place a closing single quotation mark and a closing angle bracket at the end of the URL:'>
 
 The resulting line will look like this:
 
-<img src='https://storage.googleapis.com/qwiklabs-gcp-0005e186fa559a09/my-excellent-blog.png'>
+> <#img src='https://storage.googleapis.com/qwiklabs-gcp-0005e186fa559a09/my-excellent-blog.png'>
 
 The effect of these steps is to place the line containing <img src='...'> immediately before the line containing <h1>...</h1>
 
 Do not copy the URL shown here. Instead, copy the URL shown by the Storage browser in your own Cloud Platform project.
-
 Press Ctrl+O, and then press Enter to save your edited file.
-
 Press Ctrl+X to exit the nano text editor.
-
 Restart the web server:
-
-sudo service apache2 restart
-
+> sudo service apache2 restart
 Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, its content now includes a banner image.
 
 ![](indexphp.PNG)
