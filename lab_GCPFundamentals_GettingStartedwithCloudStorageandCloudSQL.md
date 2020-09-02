@@ -134,7 +134,6 @@ Use the nano text editor to edit a file called index.php:
 sudo nano index.php
 
 Paste the content below into the file:
->
 > <html>
 > <head><title>Welcome to my excellent blog</title></head>
 > <body>
@@ -228,6 +227,10 @@ Press Ctrl+X to exit the nano text editor.
 Restart the web server:
 > sudo service apache2 restart
 Return to the web browser tab in which you opened your bloghost VM instance's external IP address. When you load the page, its content now includes a banner image.
+
+
+################################################################
+
 
 ![](indexphp.PNG)
 
