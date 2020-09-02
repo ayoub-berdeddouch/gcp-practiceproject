@@ -2,7 +2,7 @@
 In this lab, you will create virtual machines (VMs) and connect to them. You will also create connections between the instances.
 
 # Objectives
-I>n this lab, you will learn how to perform the following tasks:
+In this lab, you will learn how to perform the following tasks:
 
 > Create a Compute Engine virtual machine using the Google Cloud Platform (GCP) Console.
 > Create a Compute Engine virtual machine using the gcloud command-line interface.
@@ -12,11 +12,11 @@ I>n this lab, you will learn how to perform the following tasks:
 
 GCP Ressources : 
 ################################################
-Username : student-03-69e5b8b0bf47@qwiklabs.net
-Password : Vx3VZ86R2hN
-GCP Project ID : qwiklabs-gcp-03-269051e328b3
-Region : us-central1
-Zone : us-central1-a
+> Username : student-03-69e5b8b0bf47@qwiklabs.net
+> Password : Vx3VZ86R2hN
+> GCP Project ID : qwiklabs-gcp-03-269051e328b3
+> Region : us-central1
+> Zone : us-central1-a
 ################################################
 
 
