@@ -113,11 +113,11 @@ Copy the External IP address for my-vm-1 and paste it into the address bar of a 
 You will see your web server's home page, including your custom text.
 
 
-[](imgs/ping_mv2_to_mv1.PNG)
-[](imgs/install_nginx.PNG)
-[](imgs/curl_mv1&mv2.PNG)
-[](imgs/NginxPage.PNG)
-[](imgs/lab_GCPFundamentalsGettingStartedwithComputeEngine.PNG)
+![](imgs/ping_mv2_to_mv1.PNG)
+![](imgs/install_nginx.PNG)
+![](imgs/curl_mv1&mv2.PNG)
+![](imgs/NginxPage.PNG)
+![](imgs/lab_GCPFundamentalsGettingStartedwithComputeEngine.PNG)
 
 
 
