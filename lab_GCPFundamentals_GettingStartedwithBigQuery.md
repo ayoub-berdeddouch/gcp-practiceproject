@@ -134,6 +134,7 @@ In this section of the lab, you use the bq command in Cloud Shell to query the a
 ![](imgs/jobHistory.PNG)
 ![](imgs/tableDetails.PNG)
 ![](imgs/Query.PNG)
+![](imgs/bqQuery.PNG)
 ![](imgs/lab_GCPFundamentals_GettingStartedwithBigQuery.PNG)
 
 
