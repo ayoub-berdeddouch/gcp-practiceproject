@@ -30,8 +30,8 @@ The result of both challenges shall be documented in a Github repository
 ### GCP Fundamentals: Getting Started with Cloud Marketplace ✅
 ### GCP Fundamentals: Getting Started with Compute Engine ✅
 ### Module: GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL ✅
-### GCP Fundamentals: Getting Started with Kubernetes Engine  ✅ (DONE)
-### GCP Fundamentals: Getting Started with App Engine ❌
+### GCP Fundamentals: Getting Started with Kubernetes Engine  ✅ 
+### GCP Fundamentals: Getting Started with App Engine ✅
 ### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ❌
 ### GCP Fundamentals: Getting Started with BigQuery ❌
 ### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK ❌
