@@ -32,8 +32,8 @@ The result of both challenges shall be documented in a Github repository
 ### Module: GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL ✅
 ### GCP Fundamentals: Getting Started with Kubernetes Engine  ✅ 
 ### GCP Fundamentals: Getting Started with App Engine ✅
-### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ❌
-### GCP Fundamentals: Getting Started with BigQuery ❌
+### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ✅
+### GCP Fundamentals: Getting Started with BigQuery ✅
 ### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK ❌
 ### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
 ### App Dev: Storing Image and Video Files in Cloud Storage v1.1 ❌
