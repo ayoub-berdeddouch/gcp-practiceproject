@@ -1,5 +1,5 @@
 # gcp-practiceproject
-## GCP Practice Project during Phase II
+# GCP Practice Project during Phase II
 
 
 ## Description  
@@ -25,20 +25,54 @@ The result of both challenges shall be documented in a Github repository
 
 
 
-## LABs : 
+# LABs : 
+## Course : Google Cloud Platform Fundamentals - Core Infrastructure
 
-### GCP Fundamentals: Getting Started with Cloud Marketplace ✅
-### GCP Fundamentals: Getting Started with Compute Engine ✅
-### Module: GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL ✅
-### GCP Fundamentals: Getting Started with Kubernetes Engine  ✅ 
-### GCP Fundamentals: Getting Started with App Engine ✅
-### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ✅
+### Module :  Getting Started with Google Cloud Platform
+#### GCP Fundamentals: Getting Started with Cloud Marketplace ✅
+
+### Module :  Virtual Machines in the Cloud
+#### GCP Fundamentals: Getting Started with Compute Engine ✅
+
+### Module :  Storage in the Cloud
+#### Module: GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL ✅
+
+### Module: Containers in the Cloud
+#### GCP Fundamentals: Getting Started with Kubernetes Engine  ✅ 
+
+### Module: Applications in the Cloud
+#### GCP Fundamentals: Getting Started with App Engine ✅
+
+### Module: Developing, Deploying and Monitoring in the Cloud
+#### GCP Fundamentals: Getting Started with Deployment Manager and Stackdriver ✅
+
+### Module: Big Data and Machine Learning in the Cloud
 ### GCP Fundamentals: Getting Started with BigQuery ✅
-### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK ❌
-### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
-### App Dev: Storing Image and Video Files in Cloud Storage v1.1 ❌
+
+## Course : Getting Started With Application Development on Google Cloud
+
+### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK 
+#### App Dev: Setting up a Development Environment v1.1 ❌
+
+### Module : Best Practices for Using Cloud Datastore
+#### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
+
+### Module : Best Practices for Using Cloud Storage
+#### App Dev: Storing Image and Video Files in Cloud Storage v1.1 ❌
+
+## Course: Google Cloud Platform Big Data and Machine Learning Fundamentals
+
 ### Module: Introduction to Google Cloud Platform ❌
-### Lab: Recommend Products using ML with Cloud SQL and Dataproc ❌
-### Lab: Predict Visitor Purchases with a Classification Model with BigQuery ML ❌
-### Lab: Create a Streaming Data Pipeline for a Real-Time Dashboard with Cloud Dataflow ❌
-### Lab: Classify Images with Pre-built ML Models using Cloud Vision API and AutoML ❌
+#### Lab: Explore a BigQuery Public Dataset
+
+### Module : Recommending Products using Cloud SQL and Spark
+#### Lab: Recommend Products using ML with Cloud SQL and Dataproc ❌
+
+### Module : Predict Visitor Purchases Using BigQuery ML
+#### Lab: Predict Visitor Purchases with a Classification Model with BigQuery ML ❌
+
+### Module : Create Streaming Data Pipelines with Cloud Pub/sub and Cloud Dataflow
+#### Lab: Create a Streaming Data Pipeline for a Real-Time Dashboard with Cloud Dataflow ❌
+
+### Module : Classify Images with Pre-Built Models using Vision API and Cloud AutoML
+#### Lab: Classify Images with Pre-built ML Models using Cloud Vision API and AutoML ❌
