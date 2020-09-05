@@ -67,6 +67,50 @@ __Review the case study application__
 >> 3. Leaderboard
 
 2. In the navigation bar, click __Create Question.__
+3. In the navigation bar, click Take Test.
+4. In the navigation bar, click GCP.
+5. To return to the server-side application, click on the Quite Interesting Quiz link in the navigation bar.
+
+__Examining the Case Study Application Code__
+In this section, you will use the Cloud Shell text editor to review the case study application code.
+
+- Employ the Cloud Shell Editor
+
+1. From Cloud Shell, click Launch code editor.
+2. Navigate to the **/training-data-analyst/courses/developingapps/nodejs/datastore/start/server** folder using the file browser panel on the left side of the editor
+
+__Review the Express Web application__
+
+1. Select the **.../datastore/start/server/app.js** file.
+2. Select the **.../datastore/start/server/web-app** folder.
+3. Select the **.../datastore/start/server/web-app/questions.js** file.
+4. In the **questions.js** file, find the handler that responds to HTTP POST requests for the **/questions/add** route.
+5. Select the **.../datastore/start/server/web-app/views** folder.
+6. View the **.../datastore/start/server/web-app/views/questions/add.pug** file.
+7. Select the **.../datastore/start/server/api/index.js** file.
+8. Select the **.../datastore/start/server/gcp/datastore.js** file.
+
+__ Adding Entities to Cloud Datastore __
+
+Doing some Coding in the ** To DO **  should be updated.
+
+**Create an App Engine application to provision Cloud Datastore**
+
+1. Return to Cloud Shell and stop the application by pressing Ctrl+C.
+2. To create an App Engine application in your project, execute the following command in Cloud Shell:
+> gcloud app create --region "us-central"
+
+__ Import and use the NodeJS Datastore module__ 
+1. Open the **...gcp/datastore.js** file in the Cloud Shell editor.
+2. Load the config module from the parent folder.
+3. Load the **@google-cloud/datastore** module.
+4. Declare a Datastore client object named ds.
+
+__datastore.js__
+> 
+
+
+
 
 
 
