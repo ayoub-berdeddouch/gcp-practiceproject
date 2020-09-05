@@ -20,8 +20,9 @@ The Cloud challenge is divided in two parts:
 
 The result of both challenges shall be documented in a Github repository  
  
- **1** How to get started with Github is an available course to learners via the Associate Cloud Engineer Foundational Deep Dive Channel (2020) 
- **2** Submit the documented github repo to the GADS Team here  - bit.ly/GADSPracticeProjectSubmission
+ - **1** How to get started with Github is an available course to learners via the Associate Cloud Engineer Foundational Deep Dive Channel (2020) 
+ 
+ - **2** Submit the documented github repo to the GADS Team here  - bit.ly/GADSPracticeProjectSubmission
 
 
 
@@ -52,7 +53,7 @@ The result of both challenges shall be documented in a Github repository
 ## Course : Getting Started With Application Development on Google Cloud
 
 ### Module: Google Cloud Client Libraries, Google Cloud SDK, and Google Firebase SDK 
-#### App Dev: Setting up a Development Environment v1.1 ❌
+#### App Dev: Setting up a Development Environment v1.1 ✅
 
 ### Module : Best Practices for Using Cloud Datastore
 #### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
