@@ -56,7 +56,7 @@ The result of both challenges shall be documented in a Github repository
 #### App Dev: Setting up a Development Environment v1.1 ✅
 
 ### Module : Best Practices for Using Cloud Datastore
-#### App Dev: Storing Application Data in Cloud Datastore v1.1 ❌
+#### App Dev: Storing Application Data in Cloud Datastore v1.1 ✅
 
 ### Module : Best Practices for Using Cloud Storage
 #### App Dev: Storing Image and Video Files in Cloud Storage v1.1 ❌
