@@ -112,5 +112,20 @@ __datastore.js__
 
 
 
+![](imgs/cloneCodesource.PNG)
+![](imgs/npmStart_app.PNG)
+![](imgs/Question_bar.PNG)
+![](imgs/QuestionForm.PNG)
+![](imgs/QuizTest.PNG)
+![](imgs/DummyAnswer.PNG)
+![](imgs/CloudShelEditor.PNG)
+![](imgs/gcloudAppCreate.PNG)
+![](imgs/SavedEntities.PNG)
+![](imgs/datastor_1.PNG)
+![](imgs/datastor_2.PNG)
+![](imgs/datastor_3.PNG)
+![](imgs/lab_AppDev_StoringApplicationDataInCloudDatastoreV1_1.PNG)
+
+
 
 
