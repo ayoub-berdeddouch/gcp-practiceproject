@@ -126,4 +126,5 @@ Terminate your workload generator. Return to your ssh session on my-vm and enter
 ![](imgs/updateYAML.PNG)
 ![](imgs/YAMLupdated&CustomMetadata.PNG)
 ![](imgs/lab_GCPFundamentals_GettingStartedwithDeploymentManagerandStackdriver.PNG)
+![Proof](imgs/proof6.PNG)
 
