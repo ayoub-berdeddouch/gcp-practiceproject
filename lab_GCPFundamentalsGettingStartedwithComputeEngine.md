@@ -121,6 +121,7 @@ You will see your web server's home page, including your custom text.
 ![](imgs/curl_mv1&mv2.PNG)
 ![](imgs/NginxPage.PNG)
 ![](imgs/lab_GCPFundamentalsGettingStartedwithComputeEngine.PNG)
+![Proof](imgs/proof2.PNG)
 
 
 
