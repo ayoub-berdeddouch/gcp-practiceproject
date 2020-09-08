@@ -77,3 +77,8 @@ The result of both challenges shall be documented in a Github repository
 
 ### Module : Classify Images with Pre-Built Models using Vision API and Cloud AutoML
 #### Lab: Classify Images with Pre-built ML Models using Cloud Vision API and AutoML ❌
+
+
+
+
+![PracticeProject](imgs/practiceproject.jpg)
