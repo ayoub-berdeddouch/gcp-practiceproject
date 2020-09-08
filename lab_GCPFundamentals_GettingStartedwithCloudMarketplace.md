@@ -83,3 +83,4 @@ A summary of the PHP configuration of your server is displayed.
 
 
 ![End Lab](imgs/lab_GoogleCloudFundamentals_GettingStartedwithCloudMarketplace.PNG)
+![Proof](imgs/proof1.PNG)
