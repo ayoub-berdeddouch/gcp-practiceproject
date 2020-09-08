@@ -114,6 +114,7 @@ DONE
 ![](imgs/Consol_cmd.PNG)
 ![](imgs/VM_instances.PNG)
 ![](imgs/lab_GCPFundamentals_GettingStartedwithKubernetesEngine.PNG)
+![Proof](imgs/proof4.PNG)
 
 
 
