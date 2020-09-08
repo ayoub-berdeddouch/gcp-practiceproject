@@ -1,9 +1,12 @@
 # Overview
 In this lab, you load a web server log into a BigQuery table. After loading the data, you query it using the BigQuery web user interface and the BigQuery CLI.
 BigQuery helps you perform interactive analysis of petabyte-scale databases, and it enables near-real time analysis of massive datasets. It offers a familiar SQL 2011 query language and functions.
+
 Data stored in BigQuery is highly durable. Google stores your data in a replicated manner by default and at no additional charge for replicas. 
 With BigQuery, you pay only for the resources you use. Data storage in BigQuery is inexpensive. 
 Queries incur charges based on the amount of data they process: when you submit a query, you pay for the compute nodes only for the duration of that query. You don't have to pay to keep a compute cluster up and running.
+
+
 Using BigQuery involves interacting with a number of Google Cloud Platform resources, including projects (covered elsewhere in this course), datasets, tables, and jobs. 
 This lab introduces you to some of these resources, and this brief introduction summarizes their role in interacting with BigQuery.
 Datasets: A dataset is a grouping mechanism that holds zero or more tables. A dataset is the lowest level unit of access control. 
@@ -136,6 +139,7 @@ In this section of the lab, you use the bq command in Cloud Shell to query the a
 ![](imgs/Query.PNG)
 ![](imgs/bqQuery.PNG)
 ![](imgs/lab_GCPFundamentals_GettingStartedwithBigQuery.PNG)
+![Proof](imgs/proof7.PNG)
 
 
 
