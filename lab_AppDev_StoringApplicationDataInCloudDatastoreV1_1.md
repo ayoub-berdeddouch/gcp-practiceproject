@@ -107,7 +107,148 @@ __ Import and use the NodeJS Datastore module__
 4. Declare a Datastore client object named ds.
 
 __datastore.js__
-> 
+```
+// TODO: Load the ../config module
+
+const config = require('../config');
+
+// END TODO
+
+// TODO: Load the @google-cloud/datastore module
+
+const Datastore = require('@google-cloud/datastore');
+
+// END TODO
+
+// TODO: Create a Datastore client object, ds
+// The Datastore(...) factory function accepts an options // object which is used to specify which project's
+// Datastore should be used via the projectId property.
+// The projectId is retrieved from the config module. This // module retrieves the project ID from the GCLOUD_PROJECT // environment variable.
+
+const ds = Datastore({
+ projectId: config.get('GCLOUD_PROJECT')
+});
+
+// END TODO
+
+```
+
+__Write code to create a Cloud Datastore entity__
+
+1. Declare a constant named kind, initialized with the value 'Question'.
+
+**datastore.js**
+
+```
+// TODO: Declare a constant named kind
+//The Datastore key is the equivalent of a primary key in a // relational database.
+// There are two main ways of writing a key:
+// 1. Specify the kind, and let Datastore generate a unique //    numeric id
+// 2. Specify the kind and a unique string id
+
+const kind = 'Question';
+
+// END TODO
+```
+
+
+2. In the create(...) function, remove the existing Promise.resolve({}) placeholder statement from the create(...) function.
+
+3. Declare a constant called key to store the key for this entity.
+
+4. Declare a constant named entity and initialize it with the key and the quiz question properties extracted from the form data.
+
+5. Use the Datastore client object (ds) to save the entity by calling the save(entity) method.
+
+__datastore.js__
+
+```
+// The create({quiz, author, title, answer1, answer2,
+// answer3, answer4, correctAnswer}) function uses an
+// ECMAScript 2015 destructuring assignment to extract
+// properties from the form data passed to the function
+
+function create({ quiz, author, title, answer1, answer2,
+                  answer3, answer4, correctAnswer }) {
+ // TODO: Declare the entity key,
+ // with a Datastore generated id
+
+ const key = ds.key(kind);
+
+ // END TODO
+
+ // TODO: Declare the entity object, with the key and data
+
+ const entity = {
+   key,
+// The entity's members are represented in a data property.
+// This is an array where each element represents one
+// member in the entity. Each element is an object with a // name and a value
+   data: [
+     { name: 'quiz', value: quiz },
+     { name: 'author', value: author },
+     { name: 'title', value: title },
+     { name: 'answer1', value: answer1 },
+     { name: 'answer2', value: answer2 },
+     { name: 'answer3', value: answer3 },
+     { name: 'answer4', value: answer4 },
+     { name: 'correctAnswer', value: correctAnswer },
+   ]
+ };
+ // END TODO
+
+// TODO: Save the entity, return a promise
+ // The ds.save(...) method returns a Promise to the
+ // caller, as it runs asynchronously.
+
+ return ds.save(entity);
+
+ // END TODO
+}
+```
+
+__Run the application and create a Cloud Datastore entity__
+
+
+1. Save the ...gcp/datastore.js file and then return to the Cloud Shell command prompt.
+
+2. To start the application, execute the following command:
+
+```npm start```
+
+3. In Cloud Shell, click Web preview > Preview on port 8080 to preview the quiz application.
+4. Click __Create Question__.
+5. Complete the form with the following values, and then click Save.
+| Form Field   | Value  | 
+|---|---|
+| Author  | Your Name  |
+| Quiz   | Google Cloud Platform  |
+| Title  | Which company owns GCP?  |
+| Answer 1  | Amazon  |
+| Answer 2  | **Google**|
+| Answer 3  | IBM  |
+| Answer 4  | Microsoft  |
+
+
+- You should be returned to the home page for the application.
+
+
+6. Return to the __Cloud Platform Console__ and, on the __Navigation menu__, click __Datastore__.
+7. On the __Datastore page__, click __Entities__.
+
+
+**Result : You should see your new question!**
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -125,7 +266,7 @@ __datastore.js__
 ![](imgs/datastor_2.PNG)
 ![](imgs/datastor_3.PNG)
 ![](imgs/lab_AppDev_StoringApplicationDataInCloudDatastoreV1_1.PNG)
-
+![Proof](imgs/proof9.PNG)
 
 
 
