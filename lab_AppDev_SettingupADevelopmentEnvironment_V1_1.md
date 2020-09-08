@@ -107,3 +107,4 @@ You should see the Node.js version number for version 6.
 ![](imgs/StartedServer.PNG)
 ![](imgs/ComputeEngineinstances.PNG)
 ![](imgs/lab_AppDev_SettingupADevelopmentEnvironment_V1_1.PNG)
+![Proof](imgs/proof8.PNG)
