@@ -228,5 +228,7 @@ Return to the web browser tab in which you opened your bloghost VM instance's ex
 
 ![](imgs/lab_GCPFundamentals_GettingStartedwithCloudStorageandCloudSQL.PNG)
 
+![Proof](imgs/proof3.PNG)
+
 
 
