@@ -219,16 +219,27 @@ __Run the application and create a Cloud Datastore entity__
 3. In Cloud Shell, click Web preview > Preview on port 8080 to preview the quiz application.
 4. Click __Create Question__.
 5. Complete the form with the following values, and then click Save.
-| Form Field   | Value  | 
-|---|---|
-| Author  | Your Name  |
-| Quiz   | Google Cloud Platform  |
-| Title  | Which company owns GCP?  |
-| Answer 1  | Amazon  |
-| Answer 2  | **Google**|
-| Answer 3  | IBM  |
-| Answer 4  | Microsoft  |
+```
+|--------------|--------------------------|
+| Form Field   | Value                    | 
+|--------------|--------------------------|
+| Author       | Your Name                |
 
+| Quiz         | Google Cloud Platform    |
+
+| Title        | Which company owns GCP?  |
+
+| Answer 1     | Amazon                   |
+
+| Answer 2     | **Google**               |
+
+| Answer 3     | IBM                      |
+
+| Answer 4     | Microsoft                |
+
+|--------------|--------------------------|
+
+```
 
 - You should be returned to the home page for the application.
 
