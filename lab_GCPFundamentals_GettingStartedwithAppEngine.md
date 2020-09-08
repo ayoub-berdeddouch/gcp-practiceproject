@@ -91,3 +91,4 @@ This app deploy command uses the app.yaml file to identify project configuration
 ![](imgs/AppDeployed.PNG)
 ![](imgs/Dashboard.PNG)
 ![](imgs/lab_GCPFundamentals_GettingStartedwithAppEngine.PNG)
+![Proof](imgs/proof5.PNG)
