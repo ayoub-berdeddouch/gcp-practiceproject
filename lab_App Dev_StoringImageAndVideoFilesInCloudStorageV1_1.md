@@ -576,13 +576,3 @@ __THE 3ND__
 ![](imgs/lab_AppDev_StoringImageAndVideoFilesInCloudStorageV1_1.PNG)
 
 ![](proof10.PNG)
-
-
-
-
-
-
-
-
-
-
