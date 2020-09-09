@@ -64,7 +64,7 @@ The result of both challenges shall be documented in a Github repository
 ## Course: Google Cloud Platform Big Data and Machine Learning Fundamentals
 
 ### Module: Introduction to Google Cloud Platform 
-#### lab: [Lab: Explore a BigQuery Public Dataset]()❌
+#### lab: [Lab: Explore a BigQuery Public Dataset](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/lab_ExploreABigQueryPublicDataset.md) ✅
 
 ### Module : Recommending Products using Cloud SQL and Spark
 #### lab: [Lab: Recommend Products using ML with Cloud SQL and Dataproc]() ❌
