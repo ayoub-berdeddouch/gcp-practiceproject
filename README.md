@@ -66,7 +66,7 @@ The result of both challenges shall be documented in a Github repository
 #### lab: [Lab: Explore a BigQuery Public Dataset](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/lab_ExploreABigQueryPublicDataset.md) ✅
 
 ### Module : Recommending Products using Cloud SQL and Spark
-#### lab: [Lab: Recommend Products using ML with Cloud SQL and Dataproc]() ❌
+#### lab: [Lab: Recommend Products using ML with Cloud SQL and Dataproc](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/lab_RecommendProductsUsingMLwithCloudSQLandDataproc.md) ❌
 
 ### Module : Predict Visitor Purchases Using BigQuery ML
 #### lab: [Lab: Predict Visitor Purchases with a Classification Model with BigQuery ML]() ❌
