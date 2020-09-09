@@ -573,4 +573,4 @@ __THE 3ND__
 ![](imgs/Quiz4Storage.PNG)
 ![](imgs/QuizFeed.PNG)
 ![](imgs/lab_AppDev_StoringImageAndVideoFilesInCloudStorageV1_1.PNG)
-![proof](proof_10.PNG)
+![proof](imgs/proof_10.PNG)
