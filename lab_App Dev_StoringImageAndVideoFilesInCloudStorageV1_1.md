@@ -573,7 +573,7 @@ __THE 3ND__
 ![](imgs/Quiz4Storage.PNG)
 ![](imgs/QuizFeed.PNG)
 
-![](imgs/lab_App Dev_StoringImageAndVideoFilesInCloudStorageV1_1.PNG)
+![](imgs/lab_AppDev_StoringImageAndVideoFilesInCloudStorageV1_1.PNG)
 
 // ![](proof10.PNG)
 
