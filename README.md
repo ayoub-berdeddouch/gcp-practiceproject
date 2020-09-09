@@ -59,7 +59,7 @@ The result of both challenges shall be documented in a Github repository
 #### lab: [App Dev: Storing Application Data in Cloud Datastore v1.1](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/lab_AppDev_StoringApplicationDataInCloudDatastoreV1_1.md) ✅
 
 ### Module : Best Practices for Using Cloud Storage
-#### lab: [App Dev: Storing Image and Video Files in Cloud Storage v1.1]() ❌
+#### lab: [App Dev: Storing Image and Video Files in Cloud Storage v1.1](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/lab_App%20Dev_StoringImageAndVideoFilesInCloudStorageV1_1.md) ✅
 
 ## Course: Google Cloud Platform Big Data and Machine Learning Fundamentals
 
