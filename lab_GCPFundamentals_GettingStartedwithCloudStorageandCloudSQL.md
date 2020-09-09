@@ -7,18 +7,23 @@ Outside this lab, you will use analogous techniques to configure these packages.
 You also configure the web server to reference the image in the Cloud Storage bucket.
 
 # Objectives
-> In this lab, you learn how to perform the following tasks:
-> Create a Cloud Storage bucket and place an image into it.
-> Create a Cloud SQL instance and configure it.
-> Connect to the Cloud SQL instance from a web server.
-> Use the image in the Cloud Storage bucket on a web page.
+
+In this lab, you learn how to perform the following tasks:
+
+1. Create a Cloud Storage bucket and place an image into it.
+
+2. Create a Cloud SQL instance and configure it.
+
+3. Connect to the Cloud SQL instance from a web server.
+
+4. Use the image in the Cloud Storage bucket on a web page.
 
 
 ## Task 1: Sign in to the Google Cloud Platform (GCP) Console
 
 GCP Console Ressources  :
 
-################################################
+```
 Username : student-02-684d27270db9@qwiklabs.net
 
 Password : tLRGbwFW7P8M
@@ -29,29 +34,33 @@ Region : us-central1
 
 Zone : us-central1-a
 
-################################################
+```
 
 
 ## Task 2: Deploy a web server VM instance
 
-1_In the GCP Console, on the Navigation menu (Navigation menu), click Compute Engine > VM instances.
-2_Click Create.
-3_On the Create an Instance page, for Name, type bloghost
-4_For Region and Zone, select the region and zone assigned by Qwiklabs.
-5_For Machine type, accept the default.
-6_For Boot disk, if the Image shown is not Debian GNU/Linux 9 (stretch), click Change and select Debian GNU/Linux 9 (stretch).
-7_Leave the defaults for Identity and API access unmodified.
-8_ Firewall, click Allow HTTP traffic.
-9_Click Management, security, disks, networking, sole tenancy to open that section of the dialog.
-10_Enter the following script as the value for Startup script:
-> apt-get update
+1. In the GCP Console, on the Navigation menu (Navigation menu), click Compute Engine > VM instances.
+2. Click Create.
+3. On the Create an Instance page, for Name, type bloghost
+4. For Region and Zone, select the region and zone assigned by Qwiklabs.
+5. For Machine type, accept the default.
+6. For Boot disk, if the Image shown is not Debian GNU/Linux 9 (stretch), click Change and select Debian GNU/Linux 9 (stretch).
+7. Leave the defaults for Identity and API access unmodified.
+8. Firewall, click Allow HTTP traffic.
+9. Click Management, security, disks, networking, sole tenancy to open that section of the dialog.
+10. Enter the following script as the value for Startup script:
+```
+apt-get update
 apt-get install apache2 php php-mysql -y
 service apache2 restart
+```
 
-11_ Click Create
-12_ Copy bloghost VM instance's internal & external IP @ for further use.
+11. Click Create
+12. Copy bloghost VM instance's internal & external IP @ for further use.
+```
 Internal IP @ : 10.128.0.2
 External IP @ : 34.70.208.116
+```
 
 ## Task 3: Create a Cloud Storage bucket using the gsutil command line
 
