@@ -82,9 +82,10 @@ The result of both challenges shall be documented in a Github repository
 
 # Transaction CODE
 
-## Transaction1: [TranslationCode of lab_ GCP Fundamentals: Getting Started with Compute Engine](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/TranslationCode_lab_GCPFundamentalsGettingStartedwithComputeEngine.md)
-## Transaction2:
+### Transaction1: [TranslationCode of lab_ GCP Fundamentals: Getting Started with Compute Engine](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/TranslationCode_lab_GCPFundamentalsGettingStartedwithComputeEngine.md) ⌨💬✅
 
-## Transaction3:
+### Transaction2: [TranslationCode of lab_ GCP Fundamentals: Getting Started with Cloud Storage and Cloud SQL](https://github.com/ayoub-berdeddouch/gcp-practiceproject/blob/master/TranslationCode_lab_GCPFundamentals_GettingStartedwithCloudStorageandCloudSQL.md) ⌨💬✅
+
+### Transaction3:
 
 ![PracticeProject](imgs/practiceproject.jpg)
