@@ -224,19 +224,18 @@ __Run the application and create a Cloud Datastore entity__
 | Form Field   | Value                    | 
 |--------------|--------------------------|
 | Author       | Your Name                |
-
+|--------------|--------------------------|
 | Quiz         | Google Cloud Platform    |
-
+|--------------|--------------------------|
 | Title        | Which company owns GCP?  |
-
+|--------------|--------------------------|
 | Answer 1     | Amazon                   |
-
+|--------------|--------------------------|
 | Answer 2     | **Google**               |
-
+|--------------|--------------------------|
 | Answer 3     | IBM                      |
-
+|--------------|--------------------------|
 | Answer 4     | Microsoft                |
-
 |--------------|--------------------------|
 
 ```
@@ -251,7 +250,141 @@ __Run the application and create a Cloud Datastore entity__
 **Result : You should see your new question!**
 
 
+## Bonus: Querying Cloud Datastore
 
+In this section, you will write code to retrieve entity data from Cloud Datastore.
+
+__Write code to retrieve Cloud Datastore entities__
+
+
+1. Return to the code editor.
+
+2. In the ...gcp/datastore.js file, remove the code from the list(quiz)method.
+
+3. In the list(...) method, a query that retrieves Question entities for a specific quiz from Cloud Datastore.
+
+4. Use the Datastore client to run the query, and assign the returned promise object to a constant.
+
+5. Write a statement to return the promise.
+
+6. Chain a then(...) method to the promise.
+
+7. Write an arrow function in the then(...) method to retrieve the response from Cloud Datastore.
+
+8. In the arrow function extract the results from the response.
+
+9. Reshape the data by adding each entity ID and removing the correct answer from the data returned from Cloud Datastore.
+
+10. Complete the code in the arrow function body to return a page of entities or an object that indicates that this is the last page of results.
+
+__Run the application and test the Cloud Datastore query__
+
+
+1. Save the ...gcp/datastore.js file, and then return to the Cloud Shell command.
+2. Stop the application by pressing Ctrl+C.
+3. Start the application.
+4. In Cloud Shell, click Web preview > Preview on port 8080 to preview the quiz application.
+5. Replace the querystring at the end of the application's URL with /api/quizzes/gcp.
+```
+The URL will be in the form: https://8080-dot-####-dot-devshell.appspot.com/api/quizzes/gcp
+
+You should see that JSON data has been returned to the client corresponding to the question you added in the web application!
+```
+
+6. Return to the application home page, and click Take Test.
+7. Click GCP.
+
+```You should see that the quiz question has been formatted inside the client-side web application!```
+
+__HINT__ : ```You can find the solution to the bonus in the lab's bonus folder.```
+
+
+**Extras**
+
+ __datastore.js__ File: 
+ 
+ ```
+ // Copyright 2017, Google, Inc.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+'use strict';
+
+const Datastore = require('@google-cloud/datastore');
+const config = require('../config');
+
+// [START config]
+const ds = Datastore({
+  projectId: config.get('GCLOUD_PROJECT')
+});
+const kind = 'Question';
+// [END config]
+
+
+// Lists all questions in a Quiz (defaults to 'gcp').
+// Returns a promise
+// [START list]
+function list(quiz = 'gcp', redact = true) {
+  const q = ds.createQuery([kind])
+    .filter('quiz', '=', quiz);
+
+  const p = ds.runQuery(q);
+
+  return p.then(([results, { moreResults, endCursor }]) => {
+    const questions = results.map(item => {
+      item.id = item[Datastore.KEY].id;
+      if (redact) {
+        delete item.correctAnswer;
+      }
+      return item;
+    });
+    return {
+      questions,
+      nextPageToken: moreResults != 'NO_MORE_RESULTS' ? endCursor : false
+    };
+  });
+}
+// [END list]
+
+// [START create]
+function create({ quiz, author, title, answer1, answer2, answer3, answer4, correctAnswer, imageUrl }) {
+
+  const key = ds.key(kind);
+
+  const entity = {
+    key,
+    data: [
+      { name: 'quiz', value: quiz },
+      { name: 'author', value: author },
+      { name: 'title', value: title },
+      { name: 'answer1', value: answer1 },
+      { name: 'answer2', value: answer2 },
+      { name: 'answer3', value: answer3 },
+      { name: 'answer4', value: answer4 },
+      { name: 'correctAnswer', value: correctAnswer },
+      { name: 'imageUrl', value: imageUrl },
+    ]
+  };
+  return ds.save(entity);
+}
+// [END create]
+
+// [START exports]
+module.exports = {
+  create,
+  list
+};
+// [END exports]
+
+ ```
 
 
 
