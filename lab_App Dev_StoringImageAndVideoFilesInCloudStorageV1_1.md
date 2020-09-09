@@ -15,6 +15,16 @@ In this lab, you will learn how to perform the following tasks:
 3. Write code to store uploaded file data into Cloud Storage.
 
 
+# Setup 
+GCP Console Ressources: 
+
+```
+Username  : student-02-8d4122d395c7@qwiklabs.net
+Password  : 4RZ3VJvcg5
+GCP Project ID : qwiklabs-gcp-02-6308a369a4cf
+
+```
+
 # Reviewing the Case Study Application
 
 In this section, you will access Cloud Shell, clone the git repository containing the Quiz application, and run the application.
