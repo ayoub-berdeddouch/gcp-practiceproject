@@ -148,22 +148,22 @@ __Connect to the database__
 
 5. Once Cloud Shell loads, you will see the below command already typed:
 
-   ``` gcloud sql connect rentals --user=root --quiet```
+``` gcloud sql connect rentals --user=root --quiet```
    
 6. Hit Enter
 
 7. Wait for your IP Address to be whitelisted
-  ```Whitelisting your IP for incoming connection for 5 minutes...⠹```
+```Whitelisting your IP for incoming connection for 5 minutes...⠹```
   
 8. When prompted, enter your password and hit Enter (note: you will not see your password typed in or even ****)
     You can now run commands against your database!
 
 9. Run the below command
-    ``` SHOW DATABASES; ```
+ ``` SHOW DATABASES; ```
     
     You should see the default system databases:
     
-    ```
+```
     +--------------------+
     | Database           |
     +--------------------+
@@ -172,11 +172,15 @@ __Connect to the database__
     | performance_schema |
     | sys                |
     +--------------------+
-    ```
     
-    Note: You must always end your mySQL commands with a semi-colon ```;```
+```
+    
+    
+   Note: You must always end your mySQL commands with a semi-colon ```;```
+
 10. Copy and paste the below SQL statement you analyzed earlier paste it into the command line
-      ~~~~sql
+
+~~~~sql
       CREATE DATABASE IF NOT EXISTS recommendation_spark;
 
       USE recommendation_spark;
@@ -218,12 +222,13 @@ __Connect to the database__
       );
 
       SHOW DATABASES;
-      ~~~~
+~~~~
 
 11. Hit Enter
 
 12. Confirm you see recommendation_spark as a database now:
-      ```
+ 
+```
       +----------------------+
       | Database             |
       +----------------------+
@@ -233,19 +238,23 @@ __Connect to the database__
       | recommendation_spark |
       | sys                  |
       +----------------------+
-      ```
+
+```
 
 13. Run the following command to show our tables
-      ~~~~sql
-      USE recommendation_spark;
 
-      SHOW TABLES;
-      ~~~~
+~~~~sql
+  
+  USE recommendation_spark;
+
+  SHOW TABLES;
+~~~~
 
 14. Hit Enter
 
 15. Confim you see the three tables:
-      ```
+
+```
       +--------------------------------+
       | Tables_in_recommendation_spark |
       +--------------------------------+
@@ -253,12 +262,16 @@ __Connect to the database__
       | Rating                         |
       | Recommendation                 |
       +--------------------------------+
-      ```
+ 
+ ```
 
 16. Run the following query
-  ~~~~sql
+  
+~~~~sql
+  
   SELECT * FROM Accommodation;
-  ~~~~
+
+~~~~
   
 __QUIZ__ 
 
@@ -279,20 +292,23 @@ __Option 1: Use Command Line__
 
 2. Paste in the below command
 
-        ```
-        echo "Creating bucket: gs://$DEVSHELL_PROJECT_ID"
-        gsutil mb gs://$DEVSHELL_PROJECT_ID
+```sh
+   
+   echo "Creating bucket: gs://$DEVSHELL_PROJECT_ID"
+   gsutil mb gs://$DEVSHELL_PROJECT_ID
+ 
+   echo "Copying data to our storage from public dataset"
+   gsutil cp gs://cloud-training/bdml/v2.0/data/accommodation.csv gs://$DEVSHELL_PROJECT_ID
+   gsutil cp gs://cloud-training/bdml/v2.0/data/rating.csv gs://$DEVSHELL_PROJECT_ID
 
-        echo "Copying data to our storage from public dataset"
-        gsutil cp gs://cloud-training/bdml/v2.0/data/accommodation.csv gs://$DEVSHELL_PROJECT_ID
-        gsutil cp gs://cloud-training/bdml/v2.0/data/rating.csv gs://$DEVSHELL_PROJECT_ID
+   echo "Show the files in our bucket"
+   gsutil ls gs://$DEVSHELL_PROJECT_ID
 
-        echo "Show the files in our bucket"
-        gsutil ls gs://$DEVSHELL_PROJECT_ID
+   echo "View some sample data"
+   gsutil cat gs://$DEVSHELL_PROJECT_ID/accommodation.csv
+   
+```
 
-        echo "View some sample data"
-        gsutil cat gs://$DEVSHELL_PROJECT_ID/accommodation.csv
-        ```
 3. Hit ENTER.
 
 __Option 2: Use Console UI__
@@ -367,19 +383,22 @@ __Import user rating data__
 
 4. Query the ratings data:
 
-        ~~~~~sql
+~~~~~sql
+
         USE recommendation_spark;
 
         SELECT * FROM Rating
         LIMIT 15;
-        ~~~~~
+~~~~~
 
 5. Use a SQL aggregation function to count the number of rows in the table
 
-        ~~~~~sql
-        SELECT COUNT(*) AS num_ratings
-        FROM Rating;
-        ~~~~~
+ ~~~~~sql
+ 
+   SELECT COUNT(*) AS num_ratings
+   FROM Rating;
+   
+ ~~~~~
 
 __QUIZ__
 
@@ -393,7 +412,8 @@ __QUIZ__
 
 6. What's the average review of our accommodations?
 
-        ~~~~~sql
+ ~~~~~sql
+ 
         SELECT
             COUNT(userId) AS num_ratings,
             COUNT(DISTINCT userId) AS distinct_user_ratings,
@@ -401,8 +421,8 @@ __QUIZ__
             MAX(rating) AS best_rating,
             AVG(rating) AS avg_rating
         FROM Rating;
-        ~~~~~
-        
+ ~~~~~
+       
 __QUIZ__
 
         What is the average rating across all reviews?
@@ -425,14 +445,14 @@ __QUIZ__
         
 In machine learning, we will need a rich history of user preferences for the model to learn from. Run the below query to see which users have provided the most ratings
 
-        ~~~~~sql
-        SELECT
-            userId,
-            COUNT(rating) AS num_ratings
-        FROM Rating
-        GROUP BY userId
-        ORDER BY num_ratings DESC;
-        ~~~~~
+ ~~~~~sql
+     SELECT
+       userId,
+       COUNT(rating) AS num_ratings
+     FROM Rating
+     GROUP BY userId
+     ORDER BY num_ratings DESC;
+ ~~~~~
         
 __QUIZ__
 
@@ -526,7 +546,7 @@ gcloud sql instances patch $CLOUDSQL --authorized-networks $ips
 10. Hit enter then, when prompted, type Y, then enter again to continue
 
 11. Wait for the patching to complete. You will see
-        ``` Patching Cloud SQL instance...done. ```
+    ``` Patching Cloud SQL instance...done. ```
         
 12. Lastly, on the main Cloud SQL page, under Connect to this instance copy your Public IP Address to your clipboard (or write it down, we're using it next)
 
@@ -538,10 +558,10 @@ Your data science team has created a recommendation model using Apache Spark and
 
 1. Copy over the model code by executing the below in Cloud Shell
 
-        ```sh
-        gsutil cp gs://cloud-training/bdml/v2.0/model/train_and_apply.py train_and_apply.py
-        cloudshell edit train_and_apply.py
-        ```
+```sh
+    gsutil cp gs://cloud-training/bdml/v2.0/model/train_and_apply.py train_and_apply.py
+    cloudshell edit train_and_apply.py
+```
 
 2. When prompted, select Open in Editor
 
@@ -549,13 +569,13 @@ Your data science team has created a recommendation model using Apache Spark and
 
 4. In train_and_apply.py, find line 30: CLOUDSQL_INSTANCE_IP and paste your Cloud SQL IP address you copied earlier
 
-        ```sh
-        # MAKE EDITS HERE
-        CLOUDSQL_INSTANCE_IP = '<paste-your-cloud-sql-ip-here>'   # <---- CHANGE (database server IP)
-        CLOUDSQL_DB_NAME = 'recommendation_spark' # <--- leave as-is
-        CLOUDSQL_USER = 'root'  # <--- leave as-is
-        CLOUDSQL_PWD  = '<type-your-cloud-sql-password-here>'  # <---- CHANGE
-        ```
+```sh
+   # MAKE EDITS HERE
+   CLOUDSQL_INSTANCE_IP = '<paste-your-cloud-sql-ip-here>'   # <---- CHANGE (database server IP)
+   CLOUDSQL_DB_NAME = 'recommendation_spark' # <--- leave as-is
+   CLOUDSQL_USER = 'root'  # <--- leave as-is
+   CLOUDSQL_PWD  = '<type-your-cloud-sql-password-here>'  # <---- CHANGE
+```
 
 5. Find line 33: CLOUDSQL_PWD and type in your Cloud SQL password
 
@@ -563,7 +583,7 @@ Your data science team has created a recommendation model using Apache Spark and
 
 7. From the Cloud Shell ribbon, click on the Open Terminal icon and copy this file to your Cloud Storage bucket using this Cloud Shell command:
 
-      ```  gsutil cp train_and_apply.py gs://$DEVSHELL_PROJECT_ID```
+ ```  gsutil cp train_and_apply.py gs://$DEVSHELL_PROJECT_ID```
       
       
       
@@ -575,7 +595,7 @@ Your data science team has created a recommendation model using Apache Spark and
 
 3. For Job type, select PySpark and for Main python file, specify the location of the Python file you uploaded to your bucket. Your <bucket-name> is likely your Project Id when you can find by clicking on the Project Id dropdown in the top navigation menu.
 
-        ``` gs://<bucket-name>/train_and_apply.py``` 
+ ``` gs://<bucket-name>/train_and_apply.py``` 
 
 4. Click Submit
 
@@ -600,11 +620,12 @@ Your data science team has created a recommendation model using Apache Spark and
 
 5. At the mysql prompt, type:
 
-        ~~~~sql
-        USE recommendation_spark;
+~~~~sql
+    USE recommendation_spark;
 
-        SELECT COUNT(*) AS count FROM Recommendation;
-        ~~~~
+    SELECT COUNT(*) AS count FROM Recommendation;
+~~~~
+
         If you are getting an Empty Set (0) - wait for your Dataproc job to complete. 
         If it's been more than 5 minutes, your job has likely failed and will require troubleshooting.
 
@@ -622,7 +643,7 @@ __QUIZ__
 
 6. Find the recommendations for a user:
 
-        ~~~~sql
+~~~~sql
         SELECT
             r.userid,
             r.accoid,
@@ -637,21 +658,21 @@ __QUIZ__
         JOIN Accommodation as a
         ON r.accoid = a.id
         WHERE r.userid = 10;
-        ~~~~
+~~~~
 
 7. Confirm against the below result:
 
-        ```
-        +--------+--------+------------+-----------------------------+...
-        | userid | accoid | prediction | title                       |...
-        +--------+--------+------------+-----------------------------+...
-        | 10     | 40     |  1.9717555 | Colossal Private Castle     |...
-        | 10     | 46     |  1.7060381 | Colossal Private Castle     |...
-        | 10     | 74     |  1.4713808 | Giant Calm Fort             |...
-        | 10     | 77     |  1.4085547 | Great Private Country House |...
-        | 10     | 43     |  1.3759944 | Nice Private Hut            |...
-        +--------+--------+------------+-----------------------------+...
-        ```
+```
+     +--------+--------+------------+-----------------------------+...
+     | userid | accoid | prediction | title                       |...
+     +--------+--------+------------+-----------------------------+...
+     | 10     | 40     |  1.9717555 | Colossal Private Castle     |...
+     | 10     | 46     |  1.7060381 | Colossal Private Castle     |...
+     | 10     | 74     |  1.4713808 | Giant Calm Fort             |...
+     | 10     | 77     |  1.4085547 | Great Private Country House |...
+     | 10     | 43     |  1.3759944 | Nice Private Hut            |...
+     +--------+--------+------------+-----------------------------+...
+ ```
         These are the five accommodations that we would recommend to her. 
         Note that the quality of the recommendations are not great because our dataset
         was so small (note that the predicted ratings are not very high). 
