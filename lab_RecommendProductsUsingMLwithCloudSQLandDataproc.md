@@ -493,14 +493,15 @@ In this lab, you will:
     - Train and apply ML model written in PySpark to create product recommendations
 
     - Explore inserted rows in Cloud SQL
+    
+    
+__Note : I restarted the Lab, because the IAM role were missing to grant me and let me Create a Cluster within Dataproc.__
 
 ## Launch Dataproc
 
 To launch Dataproc and configure it so that each of the machines in the cluster can access Cloud SQL:
 
 1. In the GCP Console, on the Navigation menu , click SQL and note the region of your Cloud SQL instance:
-
-        In the snapshot above, the region is us-central1.
 
 2. In the GCP Console, on the Navigation menu (Navigation menu), click Dataproc and click Enable API if prompted.
 
@@ -515,6 +516,14 @@ To launch Dataproc and configure it so that each of the machines in the cluster 
 7. Leave all other values with their default and click Create. It will take 1-2 minutes to provision your cluster.
 
 8. Note the Name, Zone and Total worker nodes in your cluster.
+
+```
+|----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name      |Region |Zone           |Total worker nodes |Scheduled deletion |Cloud Storage staging bucket               |Created                    |Status  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|rentals	|global	|us-central1-a	|2	                |Off	            |dataproc-staging-us-919450157247-j8wb8dqn	|Sep 10, 2020, 7:07:18 PM	|Running |	
+|----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
 
 9. Copy and paste the below bash script into your Cloud Shell (optionally change CLUSTER, ZONE, NWORKERS if necessary before running)
 
