@@ -462,7 +462,7 @@ __QUIZ__
 
         How many reviews did the top user leave?
 
-        ✅75
+        ✅75  
 
         ❌50
 
@@ -648,11 +648,11 @@ __QUIZ__
 
         How many recommendations did the model provide?
 
-        125
+        ✅125
 
-        50
+        ❌50
 
-        100
+        ❌100
 
 6. Find the recommendations for a user:
 
@@ -706,11 +706,19 @@ __Recap:__
 
 
 
-![](imgs/.PNG)
-![](imgs/.PNG)
-![](imgs/.PNG)
-![](imgs/.PNG)
-![](imgs/.PNG)
-![](imgs/.PNG)
+![](imgs/ConnectUsingCloudShell.PNG)
+![](imgs/SQLconnectShell.PNG)
+![](imgs/EnterPass.PNG)
+![](imgs/ShowDBs.PNG)
+![](imgs/recommendationSPARK.PNG)
+![](imgs/StageDataCMD.PNG)
+![](imgs/AccommodationImport.PNG)
+![](imgs/RatingImport.PNG)
+![](imgs/SelectfromRating15rows&CountRatings.PNG)
+![](imgs/SelectAVGRating.PNG)
+![](imgs/SelectMostRating.PNG)
+![](imgs/PatchingDone.PNG)
+![](imgs/Train&ApplyPY_changeIP@.PNG)
+![](imgs/SubmitJob.PNG)
 ![](imgs/lab_RecommendProductsUsingMLwithCloudSQLandDataproc.PNG)
 ![Proof_12](imgs/proof_12.PNG)
