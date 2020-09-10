@@ -20,6 +20,10 @@ In this lab, you will:
 GCP Console Ressources: 
 
 ```
+- Username : student-01-a848fd9db113@qwiklabs.net
+- Password : 42MrH9vzdGw
+- GCP Project ID : qwiklabs-gcp-01-b6649b10c60d
+
 
 ```
 
@@ -39,7 +43,7 @@ The recommendations engine itself will run on Dataproc using Spark ML.
 
 4. For Instance ID, type rentals.
 
-5. Scroll down and specify a root password. Before you forget, note down the root password.
+5. Scroll down and specify a root password. Before you forget, note down the root password. (**** ayoubrentals****)
 
 6. Click Create to create the instance. It will take a minute or so for your Cloud SQL instance to be provisioned.
 
@@ -95,11 +99,11 @@ __QUIZ__
 
     How many tables will this script create?
 
-    2
+    ❌2
 
-    3
+    ✅3
 
-    1
+    ❌1
 
 
 __QUIZ__ 
@@ -107,33 +111,33 @@ __QUIZ__
     When a user rates a house (giving it four stars for example), 
     an entry is added to the _______ table.
 
-    Recommendation
+    ❌Recommendation
 
-    Rating
+    ✅Rating
 
-    Accommodation
+    ❌Accommodation
     
 __QUIZ__
 
     General information about houses, such as the number of rooms they have 
     and their average rating is stored in the _________ table.
 
-    Recommendation
+    ❌Recommendation
 
-    Rating
+    ❌Rating
 
-    Accommodation
+    ✅Accommodation
 
 __QUIZ__
 
     The job of the recommendation engine is to fill out the ___________ table for 
     each user and house: this is the predicted rating of that house by that user.
 
-    Recommendation
+    ✅Recommendation
 
-    Rating
+    ❌Rating
 
-    Accommodation
+    ❌Accommodation
 
 2. In Cloud __SQL__, click rentals to view instance information.
 
@@ -277,11 +281,11 @@ __QUIZ__
 
     How many rows are in the Accommodation table?
 
-    Empty set (0)
+    ✅Empty set (0)
 
-    100
+    ❌100
 
-    1,000
+    ❌1,000
 
 
 ## Stage Data in Google Cloud Storage
@@ -404,11 +408,11 @@ __QUIZ__
 
         How many ratings do we have in our table?
 
-        1186
+       ✅ 1186
 
-        100,000
+       ❌100,000
 
-        5,203
+       ❌5,203
 
 6. What's the average review of our accommodations?
 
@@ -427,21 +431,21 @@ __QUIZ__
 
         What is the average rating across all reviews?
 
-        2.46
+        ✅2.46
 
-        5.0
+        ❌5.0
 
-        4.51
+        ❌4.51
 
 __QUIZ__
 
         What does the 25 for distinct_user_ratings mean?
 
-        There are 25 unique users who provided the ratings
+        ✅There are 25 unique users who provided the ratings
 
-        There are 25 ratings per accommodation
+        ❌There are 25 ratings per accommodation
 
-        There are 25 ratings per user
+        ❌There are 25 ratings per user
         
 In machine learning, we will need a rich history of user preferences for the model to learn from. Run the below query to see which users have provided the most ratings
 
@@ -458,11 +462,11 @@ __QUIZ__
 
         How many reviews did the top user leave?
 
-        75
+        ✅75
 
-        50
+        ❌50
 
-        100
+        ❌100
 
 7. You may exit the mysql prompt by typing exit.
 
